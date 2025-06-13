@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!-- saved from url=(0040)file:///C:/xampp/htdocs/ajax1/index.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+  <title>ajax</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./ajax_files/style.css">
+</head>
+<body>
+ <div class="product">
+ 	<div class="main-img">
+ 		<img src="./ajax_files/2.jpeg" class="pro-img" alt="product">
+ 	</div>
+ 	<div class="thumb-img">
+ 		<div class="box active" onclick="changeImage(this)">
+ 		   <img src="./ajax_files/2.jpeg" alt="thumb">
+ 	    </div>
+ 	    <div class="box" onclick="changeImage(this)">
+ 		   <img src="./ajax_files/3.jpeg" alt="thumb">
+ 	    </div>
+ 	    <div class="box" onclick="changeImage(this)">
+ 		   <img src="./ajax_files/4.jpeg" alt="thumb">
+ 	    </div>
+ 	</div>
+ </div>
+<script>
+	    const thumbs=document.querySelector(".thumb-img").children;
+
+       	 function changeImage(event){
+            document.querySelector(".pro-img").src=event.children[0].src
+            
+            for(let i=0; i<thumbs.length;i++){
+              thumbs[i].classList.remove("active");
+            }
+            event.classList.add("active");
+       	 }
+</script>   
+</body></html>
