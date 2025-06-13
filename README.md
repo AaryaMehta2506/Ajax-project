@@ -1,20 +1,15 @@
 # 🖼️ AJAX Product Image Preview
 
-This project showcases a simple, elegant **product image viewer** using **AJAX techniques** with **HTML, CSS, and JavaScript**. Users can click on thumbnail images to change the main product image dynamically—mimicking the behavior seen in modern e-commerce platforms.
-
----
+A lightweight front-end demo using **HTML**, **CSS**, and basic **JavaScript** to showcase **AJAX-style content loading** without full-page refresh. Ideal for beginners exploring dynamic web interactions.
 
 ## 🚀 Features
 
-- 🖼️ **Thumbnail Switching**: Clicking on a thumbnail updates the main product image.
-- 📱 **Responsive Design**: Adjusts layout for mobile and desktop views.
-- ⚡ **Dynamic Image Loading**: Powered by JavaScript for seamless interaction.
-- 🎨 **CSS Styling**: Clean and intuitive layout, easy to customize.
-- 💻 **Lightweight**: No external dependencies required.
-
----
+- 🔄 **Dynamic Content Update**: Load new content into the page without a refresh.
+- 💡 **Minimal Setup**: Only HTML and CSS files needed—no dependencies or build tools.
+- 🎨 **Clean & Responsive Design**: Basic styling to present content clearly.
 
 ## 🗂️ Project Structure
+
 ajax-image-preview/
 ├── ajax.html # Main HTML file
 ├── ajax_files/
@@ -40,13 +35,11 @@ ajax-image-preview/
    cd ajax-image-preview
    ```
 2. Open ajax.html in any modern browser:
-```
-start ajax.html    # Windows
-open ajax.html     # macOS
-```
+   ```
+   start ajax.html    # Windows
+   open ajax.html     # macOS
+   ```
 3. Click on any thumbnail to preview the image as the main product.
-
-.
 
 ## 💡 Use Cases
 E-commerce product galleries
@@ -63,15 +56,15 @@ Each thumbnail is wrapped in a .box div.
 JavaScript onclick events change the src of the main product image.
 
 Active thumbnail is highlighted using .active CSS class.
-```
-function changeImage(event) {
-  document.querySelector(".pro-img").src = event.children[0].src;
-  for (let i = 0; i < thumbs.length; i++) {
-    thumbs[i].classList.remove("active");
-  }
-  event.classList.add("active");
-}
-```
+   ```
+   function changeImage(event) {
+     document.querySelector(".pro-img").src = event.children[0].src;
+     for (let i = 0; i < thumbs.length; i++) {
+       thumbs[i].classList.remove("active");
+     }
+     event.classList.add("active");
+   }
+   ```
 
 ## 🤝 Contributing
 Feel free to fork this repo, make changes, and submit pull requests!
